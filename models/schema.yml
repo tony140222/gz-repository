@@ -1,0 +1,38 @@
+version: 2
+
+models:
+
+    - name: sales
+      description: model de test en dévelloppement
+      tests:
+        - unique:
+            column_name: "(orders_id || '-' || products_id)"
+            
+      columns:
+          - name: orders_id
+            description: numero of the diferent order 
+            tests : 
+            - not_null 
+
+          - name: products_id
+            description: id of diferent products
+            tests:
+            - not_null
+            
+
+          - name: qty
+            
+                
+
+          - name: turnover
+            description: sum of the turnover
+            tests:
+            - not_null
+
+          - name: purchase_cost
+            description: amount of the purchase cost
+            tests:
+            - not_null
+
+          - name: margin
+            description: amount of the margin on the sales
